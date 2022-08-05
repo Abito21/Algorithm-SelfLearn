@@ -14,7 +14,7 @@ int main() {
     printf("b is greater than a\n");
   }
   // Print variables
-  printf("My favourite number is : %d\n", myNum);
+  printf("My favourite number is : %d\nMy favourite letter is : %c\n", myNum, myLetter);
   printf("%f\n", myFloatNum);
   printf("%c\n", myLetter);
   printf("Hello World!");
