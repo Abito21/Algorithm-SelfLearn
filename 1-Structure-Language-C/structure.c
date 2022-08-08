@@ -1,3 +1,4 @@
+// Variable Declaration and Simple Statements
 #include<stdio.h>   // Call Library
 #include<math.h>
 
