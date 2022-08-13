@@ -8,7 +8,7 @@
 int main(){
 
     // Deklarasi variabel
-    char nama[35] = " Abid Indraswara";
+    char nama[35] = "Abid Indraswara";
     int usia = 17;
     char gender = 'L';
 
