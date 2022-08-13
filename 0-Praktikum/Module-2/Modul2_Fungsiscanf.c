@@ -13,7 +13,7 @@ int main(){
 
     // Menggunakan fungsi printf dan scanf
     printf("Input Nama anda : ");
-    scanf("%s", &nama);
+    scanf("%[^\n]s", &nama);
     printf("Input Usia anda : ");
     scanf("%d", &usia);
     printf("Input Berat anda: ");
