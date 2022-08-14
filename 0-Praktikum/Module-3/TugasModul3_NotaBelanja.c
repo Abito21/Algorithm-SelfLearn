@@ -19,9 +19,9 @@ int main(){
     char input4[50]; int harga4;
     char input5[50]; int harga5;
     int totalBelanja;
-    float totalBayar;
+    int totalBayar;
     // Konstanta Diskon
-    const float diskon = 30;
+    const int diskon = 30;
 
     // Nilai Input
     // Input Data Transaksi
@@ -69,6 +69,30 @@ int main(){
     scanf("%[^\n]s", &input5);
     printf("Input harga Item 5  : ");
     scanf("%d", &harga5);
+    printf("\n");
+
+    // Operasi Aritmatika
+    totalBelanja = harga1 + harga2 + harga3 + harga4 + harga5;
+    totalBayar = totalBelanja - (totalBelanja * diskon / 100);
+
+    // Nota Belanja
+    printf("================== Nota Belanja ==================\n");
+    printf("Toko            : Pelangi Nusantara \n");
+    printf("Konsumen        : %s \n", nama);
+    printf("Transaksi       : %s \n", tanggal);
+    // Daftar Belanja
+    printf("================= Daftar Belanja =================\n");
+    printf("%s \t: Rp %d \n", input1, harga1);
+    printf("%s \t: Rp %d \n", input2, harga2);
+    printf("%s \t: Rp %d \n", input3, harga3);
+    printf("%s \t: Rp %d \n", input4, harga4);
+    printf("%s \t: Rp %d \n", input5, harga5);
+    // Daftar Belanja
+    printf("=================== Total Bayar ==================\n");
+    printf("Total Belanja   : Rp %d \n", totalBelanja);
+    printf("Diskon          : %d.0 %% \n", diskon);
+    printf("Total Bayar     : Rp %d.00 \n", totalBayar);
+    printf("==================================================\n");
 
     return 0;
 }
