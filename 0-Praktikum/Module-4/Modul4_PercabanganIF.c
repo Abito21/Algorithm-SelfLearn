@@ -1,5 +1,5 @@
 /* ------------------------------------
-        Tugas Modul 4 - Percabangan IF
+        Modul 4 - Percabangan IF
         Judul : Cek Suu
    ------------------------------------
 */
