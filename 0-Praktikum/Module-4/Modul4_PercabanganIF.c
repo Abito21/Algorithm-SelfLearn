@@ -17,7 +17,7 @@ int main(){
     // Cek Suhu dengan percabangan IF
     if(suhu > 36){
         printf("\n----------------------------\n");
-        printf("Suhu saat inii : %.2f \n", suhu);
+        printf("Suhu saat ini : %.2f \n", suhu);
         printf("Suhu Terlalu Tinggi \n");
         printf("----------------------------\n");
     }
