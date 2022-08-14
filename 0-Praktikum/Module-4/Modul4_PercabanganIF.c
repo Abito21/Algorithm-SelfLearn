@@ -1,6 +1,6 @@
 /* ------------------------------------
         Modul 4 - Percabangan IF
-        Judul : Cek Suu
+        Judul : Cek Suhu
    ------------------------------------
 */
 
