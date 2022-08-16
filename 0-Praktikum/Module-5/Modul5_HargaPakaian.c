@@ -1,5 +1,5 @@
 /* -------------------------------------------
-        Tugas Modul 5 - Percabangan Bertingkat
+        Modul 5 - Percabangan Bertingkat
         Judul : Menentukan Harga Pakaian
    -------------------------------------------
 */
