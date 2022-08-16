@@ -6,6 +6,8 @@
 
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h> // Library toupper
+#include<stdlib.h> // Library system
 
 int main(){
     // Deklarasi Variabel
@@ -32,7 +34,7 @@ int main(){
     printf("Input Golongan          : ");
     scanf("%c", &gol);
     getchar();
-    // system("cls");
+    system("cls");
 
     // Cek Nilai kelulusan
     if (masaKerja < 1){
@@ -58,7 +60,8 @@ int main(){
     }
 
     // Cek predikat kelulusan
-    switch (gol)
+    // toupper : digunakan untuk mengecek nilai karakter besar ataupun kecil
+    switch (toupper(gol))
     {
     case 'A':
         gajiPokok = 2250000;
