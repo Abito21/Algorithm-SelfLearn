@@ -32,6 +32,7 @@ int main(){
     switch (toupper(kode))
     {
     case 'A':
+        
         printf("\nKaos Motif Lengan Pendek \n");
         // Cek harga sesuai ukuran
         if(strcmp("S", ukuran)== 0){
