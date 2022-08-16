@@ -32,6 +32,7 @@ int main(){
     printf("Input Golongan          : ");
     scanf("%c", &gol);
     getchar();
+    // system("cls");
 
     // Cek Nilai kelulusan
     if (masaKerja < 1){
