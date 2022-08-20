@@ -24,13 +24,17 @@ int main(){
     // Variabel input
     char kategori;
     int status;
+    char statCetak;
     char nama[50];
     char tanggal[50];
     float beratSamp;
     // Variabel output
-    int harga;
-    int bonus;
-    int upah;
+    float harga;
+    float bonus;
+    float bonusTamb = 0;
+    float upah;
+    float upahBonus;
+    float upahTotal;
 
     // Membuat input
     printf("Nama Penyetor               : ");
@@ -60,7 +64,21 @@ int main(){
     printf("======================================== \n");
     printf("Tanggal         : %s \n", tanggal);
     printf("Nama Penyetor   : %s \n", nama);
-    printf("Status Member   : %c \n", status);
+
+    // Cek Keanggotaan
+    switch (status)
+    {
+    case 1:
+        statCetak = 'Y';
+        break;
+    case 2:
+        statCetak = 'T';
+    default:
+        printf("Status member tidak valid.");
+        break;
+    }
+
+    printf("Status Member   : %c \n", statCetak);
     printf("------------------------ \n");
     
     // Cek Total Upah
@@ -71,48 +89,101 @@ int main(){
         harga = 2000;
         if (status == 1)
         {
-            
+            bonus = 15;
+            if (beratSamp > 7)
+            {
+                bonusTamb = 5;
+            }
+        } else if (status == 2)
+        {
+            if (beratSamp >= 5)
+            {
+                bonusTamb = 7;
+            } else if (beratSamp >= 9)
+            {
+                bonusTamb = 10;
+            }
+        } else {
+            printf("Kode input anggota tidak sesuai!");
         }
-        
         break;
     case 'B':
-        printf("Produk              : Gamis Lengan Panjang \n");
-        hrgSatu = 130000;
-        diskTamb = 25;
-        if (jumlProd > 1 && (jumlProd == 2))
+        printf("Jenis Sampah\t: Sampah Plastik \n");
+        harga = 1800;
+        if (status == 1)
         {
-            disk = hrgSatu * 7 / 100;
-        } else if (jumlProd > 2) {
-            disk = hrgSatu * 12 / 100;
-        } else {
-            disk = 0;
-        }
+            bonus = 15;
+            if (beratSamp > 7)
+            {
+                bonusTamb = 5;
+            }
+        } else if (status == 2)
+        {
+            if (beratSamp >= 5)
+            {
+                bonusTamb = 7;
+            } else if (beratSamp >= 9)
+            {
+                bonusTamb = 10;
+            }
+        } 
         break;
     case 'C':
-        printf("Produk              : Minyak Kelapa Barco 5 liter \n");
-        hrgSatu = 84900;
-        if (jumlProd >= 3)
+        printf("Jenis Sampah\t: Sampah Logam \n");
+        harga = 5700;
+        if (status == 1)
         {
-            disk = hrgSatu * 15 / 100;
-        }
+            bonus = 15;
+            if (beratSamp > 7)
+            {
+                bonusTamb = 5;
+            }
+        } else if (status == 2)
+        {
+            if (beratSamp >= 5)
+            {
+                bonusTamb = 7;
+            } else if (beratSamp >= 9)
+            {
+                bonusTamb = 10;
+            }
+        } 
         break;
     case 'D':
-        printf("Produk              : Minyak Kelapa Barco 5 liter \n");
-        hrgSatu = 84900;
-        if (jumlProd >= 3)
+        printf("Jenis Sampah\t: Sampah Kaca \n");
+        harga = 4300;
+        if (status == 1)
         {
-            disk = hrgSatu * 15 / 100;
-        }
+            bonus = 15;
+            if (beratSamp > 7)
+            {
+                bonusTamb = 5;
+            }
+        } else if (status == 2)
+        {
+            if (beratSamp >= 5)
+            {
+                bonusTamb = 7;
+            } else if (beratSamp >= 9)
+            {
+                bonusTamb = 10;
+            }
+        } 
         break;
     default:
+        printf("Kategori sampah tidak tersedia.");
         break;
     }
 
-    // Menghitung total harga beli
-    totHrg = hrgSatu * jumlProd;
-    // Menghitung total harga akhir
-    totHrgAkh = totHrg - disk - diskTamb;
+    // Menghitung total upah
+    upah = harga * beratSamp;
+    upahBonus = upah * (bonus + bonusTamb) / 100;
+    upahTotal = upah + upahBonus;
 
+    printf("Berat Sampah\t: %.1f \n", beratSamp);
+    printf("Bonus Member\t: %.1f \n", bonus);
+    printf("Bonus Tambahan\t: %.1f \n", bonusTamb);
+    printf("Total Upah\t: Rp. %.1f \n", upahTotal);
     printf("============== Terima Kasih ============ \n");   
 
 }
