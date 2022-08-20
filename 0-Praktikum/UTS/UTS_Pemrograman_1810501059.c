@@ -72,7 +72,6 @@ int main(){
         if (status == 1)
         {
             
-            
         }
         
         break;
