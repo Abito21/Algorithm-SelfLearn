@@ -4,6 +4,6 @@ void main(){
     int A, B, T;
     A = 5;
     B = 2;
-    T = A;
+    T = A + B;
     printf("%i", T);
 }
