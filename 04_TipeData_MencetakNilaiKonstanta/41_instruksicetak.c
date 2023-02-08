@@ -1,6 +1,7 @@
 #include<stdio.h>
 
 void main(){
+    // Deklarasi variabel
     int A, B, T;
     A = 5;
     B = 2;
